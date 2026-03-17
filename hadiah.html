@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pilih Hadiah</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+<div class="logo">Ayesha's Birthday</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="ucapan.html">Ucapan</a></li>
+<li><a href="hadiah.html"class="active">Hadiah</a></li>
+</ul>
+
+</nav>
+
+
+<!-- Hero -->
+<section class="hero-carousel">
+
+<div class="slides">
+
+<div class="slide active">
+<img src="img/hero1.jpg">
+</div>
+
+<div class="slide">
+<img src="img/hero2.jpg">
+</div>
+
+<div class="slide">
+<img src="img/hero3.jpg">
+</div>
+
+</div>
+
+<div class="hero-text">
+<h1>Pilih Hadiah 🎁 </h1>
+<p>Pilih yang kamu suka hehe..</p>
+</div>
+
+</section>
+
+
+
+<!-- ANIMASI KADO -->
+<section class="gift-animation">
+
+<h2>Klik Kadonya Dulu 🎁</h2>
+
+<div class="gift-box" onclick="bukaKado()">
+
+<div class="gift-lid"></div>
+
+<div class="gift-body"></div>
+
+<div class="gift-ribbon"></div>
+
+</div>
+
+<p id="giftMessage" class="gift-message">
+BWAAAAA 
+</p>
+
+</section>
+
+
+
+<!-- SECTION HADIAH -->
+<section class="hadiah-section">
+
+<h2 class="section-title">Pilih Hadiah</h2>
+
+<div class="hadiah-container">
+
+
+<!-- HADIAH 1 -->
+<div class="gift-card">
+
+<img src="img/hadiah1.jpg">
+
+<div class="gift-info">
+
+<h3>Rumah 🏡</h3>
+<p>Rumah untuk pegangan masa tua</p>
+
+<button onclick="pilihHadiah(1)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 2 -->
+<div class="gift-card">
+
+<img src="img/hadiah2.jpg">
+
+<div class="gift-info">
+
+<h3>Tas 👜</h3>
+<p>Lumayan buat koleksi</p>
+
+<button onclick="pilihHadiah(2)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 3 -->
+<div class="gift-card">
+
+<img src="img/hadiah3.jpg">
+
+<div class="gift-info">
+
+<h3>Mobil 🚗</h3>
+<p>P! Balap </p>
+
+<button onclick="pilihHadiah(3)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 4 -->
+<div class="gift-card">
+
+<img src="img/hadiah4.jpg">
+
+<div class="gift-info">
+
+<h3>Nike P6000 👟</h3>
+<p>couplean kah kita?</p>
+
+<button onclick="pilihHadiah(4)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 5 -->
+<div class="gift-card">
+
+<img src="img/hadiah5.jpg">
+
+<div class="gift-info">
+
+<h3>Make Up</h3>
+<p>Make Up nih katanya waktu itu minta</p>
+
+<button onclick="pilihHadiah(5)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 6 (GELANG ASLI) -->
+<div class="gift-card">
+
+<img src="img/hadiah6.jpg">
+
+<div class="gift-info">
+
+<h3>Special Bracelet 💎</h3>
+<p>Mungkin ini hadiah spesial?</p>
+
+<button onclick="pilihHadiah(6)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 7 -->
+<div class="gift-card">
+
+<img src="img/hadiah7.jpg">
+
+<div class="gift-info">
+
+<h3>Perfume 🌷</h3>
+<p>Parfum nih biar makin wangi lagi</p>
+
+<button onclick="pilihHadiah(7)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 8 -->
+<div class="gift-card">
+
+<img src="img/hadiah8.jpg">
+
+<div class="gift-info">
+
+<h3>Birthday Cake 🧁</h3>
+<p>Katanya taun ini mau birthday cake</p>
+
+<button onclick="pilihHadiah(8)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 9 -->
+<div class="gift-card">
+
+<img src="img/hadiah9.jpg">
+
+<div class="gift-info">
+
+<h3>Cincin 💍</h3>
+<p>Siapa tau mau buat ntar</p>
+
+<button onclick="pilihHadiah(9)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+
+<!-- HADIAH 10 -->
+<div class="gift-card">
+
+<img src="img/hadiah10.jpg">
+
+<div class="gift-info">
+
+<h3>Iphone 17 Promax 2tb 📱 </h3>
+<p>Siapa tau mau</p>
+
+<button onclick="pilihHadiah(10)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+<div class="gift-card">
+
+<img src="img/hadiah11.jpg">
+
+<div class="gift-info">
+
+<h3>Kalung Pandora </h3>
+<p>Udah lama ga pakek kalung kamu</p>
+
+<button onclick="pilihHadiah(11)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+<div class="gift-card">
+
+<img src="img/hadiah12.jpg">
+
+<div class="gift-info">
+
+<h3>Erwin Trimulya Purwono </h3>
+<p>MINUS NONMUS, WAJIB PILIH YANG INI GA SIH??</p>
+
+<button onclick="pilihHadiah(12)">
+Pilih Hadiah
+</button>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<div class="gift-popup" id="giftPopup">
+
+<div class="popup-content">
+
+<span class="popup-close" onclick="tutupPopup()">×</span>
+
+<div class="popup-icon" id="popupIcon">❌</div>
+
+<h2 id="giftTitle">Hadiah Tidak Tersedia</h2>
+
+<p id="giftText">
+Yahh hadiah ini tidak tersedia 😅 Coba pilih kado lain ya!
+</p>
+
+<button id="popupButton" class="popup-btn" onclick="tutupPopup()">
+Coba Lagi
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Semoga kamu suka 🎁</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

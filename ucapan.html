@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ucapan Untuk Ayesha</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+<div class="logo">Ayesha's Birthday</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="ucapan.html" class="active">Ucapan</a></li>
+<li><a href="hadiah.html">Hadiah</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero-carousel">
+
+<div class="slides">
+
+<div class="slide active">
+<img src="img/hero1.jpg">
+</div>
+
+<div class="slide">
+<img src="img/hero2.jpg">
+</div>
+
+<div class="slide">
+<img src="img/hero3.jpg">
+</div>
+
+</div>
+
+<div class="hero-text">
+<h1>Ucapan Untuk Ayesha 🎉</h1>
+<p>Dari orang-orang yang sayang sama kamu</p>
+</div>
+
+</section>
+
+<section class="page-section">
+
+<!-- UCAPAN TEMAN -->
+<h2>Tolong di Lihat!!</h2>
+<h2 class="section-title">Ucapan dari Manusia-Manusia</h2>
+
+<div class="video-container">
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline poster ="img/thumb1.jpg">
+<source src="video/teman.mp4" type="video/mp4">
+</video>
+<h3>Angela Seli</h3>
+</div>
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline poster ="img/thumb2.jpg">
+<source src="video/teman2.mp4" type="video/mp4">
+</video>
+<h3>Angelica Bernadeth</h3>
+</div>
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline poster ="img/thumb3.jpg">
+<source src="video/teman3.mp4" type="video/mp4">
+</video>
+<h3>Nazwa Naurelia</h3>
+</div>
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline>
+<source src="video/teman4.mp4" type="video/mp4"> 
+</video>
+<h3>Khansa El</h3>
+</div>
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline poster ="img/thumb5.jpg">
+<source src="video/teman5.mp4" type="video/mp4">
+</video>
+<h3>Alicia Safiken</h3>
+</div>
+
+
+</div>
+
+
+<!-- UCAPAN ORANG TUA -->
+<h2 class="section-title">Ucapan dari Orang Tua</h2>
+
+<div class="video-container">
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline>
+<source src="video/ortu.mp4" type="video/mp4">
+</video>
+<h3>Bunda & Ayah</h3>
+</div>
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline>
+<source src="video/alea&widy.mp4" type="video/mp4">
+</video>
+<h3>Alea & Kak Widy</h3>
+</div>
+
+</div>
+
+
+<!-- UCAPAN SPESIAL -->
+<h2 class="section-title">Dari Mantan Kandung</h2>
+
+<div class="video-container">
+
+<div class="video-card">
+<video class="preview-video" muted loop playsinline poster ="img/thumberwin.jpg">
+<source src="video/mantankandung.mp4" type="video/mp4">
+</video>
+<h3>Erwin Trimulya Purwono</h3>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<footer>
+<p>Semoga harimu menyenangkan 🎉</p>
+</footer>
+
+<script src="script.js"></script>
+
+<div id="videoModal" class="video-modal">
+    
+    <span class="close-modal">&times;</span>
+
+    <video id="modalVideo" controls></video>
+
+</div>
+
+<script>
+
+const videos = document.querySelectorAll(".preview-video");
+
+const modal = document.getElementById("videoModal");
+const modalVideo = document.getElementById("modalVideo");
+const closeBtn = document.querySelector(".close-modal");
+
+// HOVER PREVIEW
+videos.forEach(video => {
+
+    video.addEventListener("mouseenter", () => {
+        video.play();
+    });
+
+    video.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+        video.load();
+    });
+
+    // CLICK → OPEN MODAL
+    video.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const src = video.querySelector("source").src;
+
+        modalVideo.src = src;
+        modal.classList.add("show");
+
+        modalVideo.play();
+    });
+
+});
+
+// CLOSE MODAL (X)
+closeBtn.addEventListener("click", () => {
+    closeModal();
+});
+
+// CLOSE MODAL (CLICK OUTSIDE)
+modal.addEventListener("click", (e) => {
+    if(e.target === modal){
+        closeModal();
+    }
+});
+
+// FUNCTION CLOSE
+function closeModal(){
+    modal.classList.remove("show");
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    modalVideo.src = "";
+}
+
+</script>
+
+</body>
+</html>

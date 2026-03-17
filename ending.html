@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hadiah Spesial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:flex-start; /* penting */
+text-align:center;
+background:linear-gradient(135deg,#ee7e81,#f09d9d);
+color:white;
+overflow-y:auto; /* biar bisa scroll */
+padding:40px 20px;
+}
+
+.container{
+max-width:700px;
+padding:40px;
+z-index:2;
+margin-top:40px;
+margin-bottom:40px;
+}
+
+.gift{
+font-size:80px;
+margin-bottom:20px;
+animation:bounce 2s infinite;
+}
+
+h1{
+font-family:'Playfair Display', serif;
+font-size:48px;
+margin-bottom:20px;
+animation:fadeUp 1s ease;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:25px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn{
+display:inline-block;
+padding:14px 32px;
+background:white;
+color:#ff4b6e;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:22px;
+animation:float 6s linear infinite;
+opacity:0.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+}
+
+.fade-text{
+opacity:0;
+transform:translateY(25px);
+transition: all 2s ease;
+letter-spacing:0.5px;
+}
+
+.fade-text.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="gift">🦷🦷</div>
+
+<h1>selamat Ulang Tahun Ya</h1>
+
+<p class="fade-text">Ini adalah hadiah spesial</p>
+
+<p class="fade-text">Semoga gelangnya cocok ya di tanganmu.</p>
+
+<p class="fade-text">Semoga juga tidak luntur 😄</p>
+
+<p class="fade-text">Karena ini bukan emas murni...</p>
+
+<p class="fade-text">(i dont have money bro hehe)</p>
+
+<p class="fade-text">Jujur waktu paket gelangnya datang,</p>
+
+<p class="fade-text">mamah ikut unboxing.</p>
+
+<p class="fade-text">Terus mamah bilang,</p>
+
+<p class="fade-text">"mamah juga baru beli kalung..."</p>
+
+<p class="fade-text">"...tapi mamah nggak pakai."</p>
+
+<p class="fade-text">Akhirnya mamah bilang,</p>
+
+<p class="fade-text">"yaudah kasihkan Ayesha aja..."</p>
+
+<p class="fade-text">"...tapi jangan bilang Ayesha ya."</p>
+
+<p class="fade-text">"Satu lagi, maaf video bunda ayah AI"</p>
+
+<p class="fade-text">"Karena bunda ga enak kalau misal bikin vid nya sendiri tanpa om"</p>
+
+<p class="fade-text">SELMAT ULANG TAHUN YA 🎉</p>
+
+<p class="fade-text">Semoga di usia kamu yang ke-21 ini...</p>
+
+<p class="fade-text">kamu bisa menjadi pribadi yang semakin dewasa,</p>
+
+<p class="fade-text">Lebih sabar,</p>
+
+<p class="fade-text">Tidak mudah marah,</p>
+
+<p class="fade-text">Dan lebih mengerti perasaan orang lain.</p>
+
+<p class="fade-text">Semoga setiap langkah kamu ke depan</p>
+
+<p class="fade-text">dipenuhi hal-hal baik</p>
+
+<p class="fade-text">Dan membawa kamu ke versi terbaik dirimu.</p>
+
+<p class="fade-text">Semoga kamu semakin kuat menghadapi hidup,</p>
+
+<p class="fade-text">Tidak mudah menyerah,</p>
+
+<p class="fade-text">Dan selalu diberikan ketenangan.</p>
+
+<p class="fade-text">Dalam setiap keputusan yang kamu ambil.</p>
+
+<p class="fade-text">Semoga semua doa kamu...</p>
+
+<p class="fade-text">pelan-pelan jadi kenyataan.</p>
+
+<p class="fade-text">Semoga semua urusan kamu dimudahkan.</p>
+
+<p class="fade-text">Kuliah,</p>
+
+<p class="fade-text">Skripsi,</p>
+
+<p class="fade-text">Dan rencana masa depan kamu.</p>
+
+<p class="fade-text">Semoga kamu lulus tepat waktu</p>
+
+<p class="fade-text">Dengan hasil yang membanggakan.</p>
+
+<p class="fade-text">Dan setelah itu...</p>
+
+<p class="fade-text">hidup kamu semakin lancar,</p>
+
+<p class="fade-text">Rezeki cukup,</p>
+
+<p class="fade-text">Dikelilingi orang-orang baik.</p>
+
+<p class="fade-text">Dan jangan lupa bersyukur ya</p>
+
+<p class="fade-text">Karena dari situ kebahagiaan tumbuh.</p>
+
+<p class="fade-text">Intinya...</p>
+
+<p class="fade-text">Semoga kamu jadi versi yang lebih baik,</p>
+
+<p class="fade-text">Lebih bijak,</p>
+
+<p class="fade-text">Lebih kuat,</p>
+
+<p class="fade-text">Dan lebih bahagia.</p>
+
+<p class="fade-text">Be your self.</p>
+
+<p class="fade-text">Tapi terus berkembang.</p>
+
+<p class="fade-text">Kalau suatu saat kamu ada masalah...</p>
+
+<p class="fade-text">bilang aja ya.</p>
+
+<p class="fade-text">Selama aku bisa bantu,</p>
+
+<p class="fade-text">aku pasti bantu kok.</p>
+
+<p class="fade-text">Tenang aja 😊</p>
+
+<p class="fade-text">Sekali lagi...</p>
+
+<p class="fade-text">Selamat ulang tahun ya 🥳</p>
+
+<p class="fade-text">I love U</p>
+
+<p class="fade-text">From Mantan Kandung</p>
+
+<p class="fade-text">BTW...</p>
+
+<p class="fade-text">SEMANGAT SKRIPSINYA 🔥</p>
+
+<a href="index.html" class="btn">
+Home
+</a>
+
+</div>
+<audio id="endingMusic" loop>
+    <source src="thank.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+
+/* CONFETTI */
+function startConfetti(){
+
+const duration = 5000
+const end = Date.now() + duration
+
+;(function frame(){
+
+confetti({
+particleCount:6,
+angle:60,
+spread:70,
+origin:{x:0},
+zIndex:5000
+})
+
+confetti({
+particleCount:6,
+angle:120,
+spread:70,
+origin:{x:1},
+zIndex:5000
+})
+
+if(Date.now() < end){
+requestAnimationFrame(frame)
+}
+
+})()
+
+}
+
+startConfetti()
+
+
+/* HEART EFFECT */
+function createHeart(){
+
+for(let i = 0; i < 3; i++){
+
+    setTimeout(()=>{
+
+        const heart = document.createElement("div")
+
+        heart.classList.add("heart")
+        heart.innerHTML = "💕"
+
+        heart.style.left = Math.random()*100 + "vw"
+        heart.style.top = Math.random()*100 + "vh"
+        heart.style.fontSize = (20 + Math.random()*25) + "px"
+
+        document.body.appendChild(heart)
+
+        setTimeout(()=>{
+            heart.remove()
+        },6000)
+
+    }, i * 200) // delay kecil
+
+}
+
+}
+
+setInterval(createHeart,400)
+
+
+window.addEventListener("load", function(){
+
+const music = document.getElementById("endingMusic")
+const texts = document.querySelectorAll(".fade-text")
+
+// ======================
+// MUSIC START
+// ======================
+
+music.volume = 0
+music.play().catch(()=>{})
+
+// fade in musik
+let vol = 0
+const fadeMusic = setInterval(()=>{
+    vol += 0.05
+    if(vol >= 0.3){
+        music.volume = 0.3
+        clearInterval(fadeMusic)
+    } else {
+        music.volume = vol
+    }
+}, 50)
+
+// ======================
+// TEXT SYNC
+// ======================
+
+// delay dikit biar masuk bareng feel
+setTimeout(()=>{
+
+    texts.forEach((text, index) => {
+        setTimeout(()=>{
+            text.classList.add("show")
+        }, index * 1300)
+    })
+
+}, 400) // delay awal biar barengan sama musik
+
+})
+
+</script>
+
+</body>
+
+</html>
